@@ -743,7 +743,7 @@ public:
             pcl::toROSMsg(*cloudOut, cloudMsgTemp);
             cloudMsgTemp.header.stamp = ros::Time().fromSec(timeLaserOdometry);
             cloudMsgTemp.header.frame_id = "/camera_init";
-            //pubRegisteredCloud.publish(cloudMsgTemp);
+            pubRegisteredCloud.publish(cloudMsgTemp);
         } 
     }
 
@@ -817,7 +817,7 @@ public:
         pcl::toROSMsg(*globalMapKeyFramesDS, cloudMsgTemp);
         cloudMsgTemp.header.stamp = ros::Time().fromSec(timeLaserOdometry);
         cloudMsgTemp.header.frame_id = "/camera_init";
-        pubLaserCloudSurround.publish(cloudMsgTemp);  
+        //pubLaserCloudSurround.publish(cloudMsgTemp);  
 
         globalMapKeyPoses->clear();
         globalMapKeyPosesDS->clear();
