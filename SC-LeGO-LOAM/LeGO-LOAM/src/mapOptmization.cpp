@@ -743,7 +743,7 @@ public:
             pcl::toROSMsg(*cloudOut, cloudMsgTemp);
             cloudMsgTemp.header.stamp = ros::Time().fromSec(timeLaserOdometry);
             cloudMsgTemp.header.frame_id = "/camera_init";
-            pubRegisteredCloud.publish(cloudMsgTemp);
+            //pubRegisteredCloud.publish(cloudMsgTemp);
         } 
     }
 
